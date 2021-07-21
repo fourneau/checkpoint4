@@ -1,6 +1,11 @@
+
+   .card_competence1 {
+    height: 10%;
+    width: 150%;
+}
+
 .body {
     font-size: 20px;
-    color: #4886af;
 }
 
 body::after {
@@ -51,8 +56,6 @@ hr {
     font-size: 14px;
     background-color: white;
 }
-
-
 /* navbar */
 
 .navbar-custom {
@@ -74,7 +77,6 @@ hr {
     justify-content: space-between;
     padding-left: 40px;
     padding-right: 40px;
-    size: 24rem;
 }
 
 .nav-link:hover {
@@ -101,8 +103,6 @@ hr {
     border-radius: 10px;
     font-size: 26px;
 }
-
-
 /* navbar invoice*/
 
 .navbar-invoice {
@@ -131,8 +131,6 @@ hr {
     color: #4886af;
     font-size: 24px;
 }
-
-
 /* facturation */
 
 .logoInvoice {
@@ -208,44 +206,38 @@ li .footerInvoice {
     display: flex;
     justify-content: center;
 }
-
-
 /* présentation */
 
 .about {
     background: rgba(54, 54, 54, 0.6);
     padding-bottom: 50px;
-    width: 120%;
-    margin-right: 5000px!important;
 }
 
 #card-about {
-    position: relative;
-    height: 400px;
-    color: white;
-    float: left;
-    transform: translateY(25px);
-    animation-delay: 3s;
-    animation-name: slideIn;
-    animation-iteration-count: infinite;
-    animation-duration: 7s;
+ position: relative;
+ height: 400px;
+ float: left;
+ transform: translateY(-50px);
+ opacity: 0;
+ animation-name: slideIn;
+ animation-iteration-count: infinite;
+ animation-duration: 3s;
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateY(-25px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(25px);
-        opacity: 1;
-    }
+ 0% {
+     transform: translateY(-25px);
+     opacity: 0.3;
+ }
+ 100% {
+     transform: translateY(25px);
+     opacity: 1;
+ }
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    color: #4886af;
 }
 
 h5 {
@@ -260,15 +252,13 @@ h6 {
 }
 
 .picture {
-    width: 80%;
+    width: 50%;
     height: auto;
 }
 
 .titre {
     margin-left: 30px;
 }
-
-
 /*competence*/
 
 .card-text_1 {
@@ -290,7 +280,6 @@ h6 {
     border-radius: 20px;
     box-shadow: 8px 8px 2px 1px rgba(25, 25, 26, 0.2);
     background-color: #e7e7e7;
-    color: #4886af;
     height: 80%;
     width: 100%;
 }
@@ -314,8 +303,6 @@ h6 {
     background-color: #6db4e2;
     box-shadow: 10px 10px rgba(0, 0, 0, .25);
 }
-
-
 /*Actualités*/
 
 .row-link {
@@ -345,8 +332,6 @@ h6 {
     height: 2rem;
     width: 50rem;
 }
-
-
 /*Modal*/
 
 .modal-header {
@@ -371,7 +356,7 @@ h6 {
 }
 
 .new_description {
-    height: 12.5rem;
+    height: 13rem;
     width: 98%;
     overflow: hidden;
     margin-bottom: 2%;
@@ -401,8 +386,6 @@ h6 {
     box-shadow: 10px 10px rgba(0, 0, 0, .25);
     color: #4886af;
 }
-
-
 /* Contact CSS */
 
 ul {
@@ -452,20 +435,11 @@ footer {
     margin-left: 15px;
 }
 
-.form-check-label {
-    color: #4886af;
-}
-
 @media screen and (min-width: 1441px) {
     .img-carousel {
         height: 90vh;
         width: 100vw;
         align-items: center;
-    }
-    .carousel-caption {
-        position: relative;
-        margin-left: -250px;
-        margin-right: 460px;
     }
 }
 
@@ -475,9 +449,9 @@ footer {
         align-items: center;
     }
     .carousel-caption {
-        top: 40%;
+        top: 70%;
         transform: translateY(-50%);
-        bottom: initial;
+        bottom: initial
     }
     .map {
         height: 80%;
@@ -502,7 +476,7 @@ footer {
     .avatar {
         height: 60%;
         width: 60%;
-        padding-top: 80%;
+        padding-top: 0%;
         padding-bottom: 00%;
     }
     card-title {
@@ -512,7 +486,7 @@ footer {
         display: none;
     }
     .carousel-caption {
-        top: 50%;
+        top: 00%;
         transform: translateY(-1050%);
         bottom: initial
     }
@@ -656,7 +630,7 @@ html {
 }
 
 .card-body {
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 .card-text {
