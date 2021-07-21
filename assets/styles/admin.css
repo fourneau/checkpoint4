@@ -1,5 +1,5 @@
     body {
-        background: linear-gradient(to right, #4886af, white);
+        background: linear-gradient(to left, rgba(27, 7, 73, 0.705), black);
     }
     /*Header*/
     
@@ -9,7 +9,7 @@
     /*Table header*/
     
     .datagrid thead {
-        background-color: #4886af;
+        background: linear-gradient(to right, rgba(27, 7, 73, 0.705), black);
     }
     /*Admin icon*/
     

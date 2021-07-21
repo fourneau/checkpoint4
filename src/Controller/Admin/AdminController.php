@@ -58,8 +58,8 @@ class AdminController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Compétences', 'fas fa-balance-scale', Expertise::class);
         yield MenuItem::linkToCrud('Actualités', 'fas fa-book-reader', News::class);
         yield MenuItem::linkToCrud('Catégories d\'actualités', 'fa fa-book fa-fw', NewsCategory::class);
-        yield MenuItem::section('Reglages');
         yield MenuItem::linkToCrud('Contact', 'fas fa-headset', Contact::class);
+        yield MenuItem::section('Reglages');
         yield MenuItem::linkToCrud('Carrousel', 'fas fa-parachute-box', UploadCarrousel::class);
         yield MenuItem::linkToCrud('Background', 'far fa-images', UploadBackground::class);
         yield MenuItem::linkToLogout('Deconnexion', 'fa fa-sign-out');

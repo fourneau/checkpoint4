@@ -59,7 +59,7 @@ hr {
 /* navbar */
 
 .navbar-custom {
-    background-color: #4886af;
+    background: linear-gradient(to right, rgba(27, 7, 73, 0.705), black);
     font-size: 24px;
 }
 
@@ -376,7 +376,7 @@ h6 {
     border-width: 15px;
     border-radius: 20px;
     box-shadow: 8px 8px 2px 1px rgba(25, 25, 26, 0.2);
-    background-color: #4886af;
+    background: linear-gradient(to right, rgba(27, 7, 73, 0.705), black);
     color: white;
     height: 30rem;
 }
@@ -400,7 +400,7 @@ ul {
 footer {
     justify-content: space-between;
     padding: 1rem;
-    background-color: #4886af;
+    background: linear-gradient(to right, rgba(27, 7, 73, 0.705), black);
     color: white;
     text-align: center;
 }
