@@ -17,18 +17,11 @@ class AppFixtures extends Fixture
     {
         $faker = \Faker\Factory::create();
         $abo = new About();
-        $abo->setTitle('Thibaud Béjat')
-            ->setSubtitle('- Avocat à la Cour de Paris -')
-            ->setDescription("Avocat au Barreau de Paris, spécialisé en droit du travail et droit de la sécurité sociale.
-            Clientèle se composant principalement de startups.
-            
-            Activité de Conseil et activité judiciaire devant le Conseil de prud'hommes, le Tribunal judiciaire et le Tribunal de Commerce.
-            
-            Grand adepte du Legal Design, afin de répondre au mieux aux besoins du client/utilisateur en utilisant un langage clair et une infographie intelligible et pertinente.
-            
-            Curieux, rigoureux, diplomate et doté d'une jolie plume.")
-            ->setAvatar('https://fr.freepik.com
-            /photos-gratuite/avocat-client_3357722.htm#page=1&query=avocat&position=29');
+        $abo->setTitle('FOURNEAU Julien')
+            ->setSubtitle('- Développeur & Punchliner -')
+            ->setDescription("Développeur Web et Spécialiste en Punchline, je peux réaliser vos site ou vous faire rire toute la journée,
+             je peux me rendre partout dans le monde du moment que je ne paye rien et je n'accepte que les hotels 5 étoiles, Formé par John Doe, je suis aimable et courtois mais faut pas me casser les pieds.")
+            ->setAvatar('https://ibb.co/frrKJvB');
         $manager->persist($abo);
 
         $newscategories = [$faker->word, $faker->word];
@@ -41,22 +34,22 @@ class AppFixtures extends Fixture
             array_push($arrayNewsCategories, $newscat);
         }
 
-        for ($i = 0; $i < 4; $i++) {
-            $new = new News();
-            $new->setTitle($faker->words(3, true))
-            ->setSubtitle($faker->words(5, true))
-            ->setDescription($faker->paragraph(30, true))
-            ->setDate($faker->dateTime())
-            ->setImportance($faker->numberBetween(0.1))
-            ->setNewsCategory($faker->randomElement($arrayNewsCategories));
-            $manager->persist($new);
-        }
+        //for ($i = 0; $i < 4; $i++) {
+            //$new = new News();
+            //$new->setTitle($faker->words(3, true))
+            //->setSubtitle($faker->words(5, true))
+            //->setDescription($faker->paragraph(30, true))
+            //->setDate($faker->dateTime())
+            //->setImportance($faker->numberBetween(0.1))
+            //->setNewsCategory($faker->randomElement($arrayNewsCategories));
+            //$manager->persist($new);
+        //}
 
 
         $foot = new Footer();
-        $foot->setPhone('07.70.56.16.34')
-            ->setCity('Paris')
-            ->setEmail('tbejat.avocat@gmail.com')
+        $foot->setPhone('06.21.80.77.41')
+            ->setCity('Angerville')
+            ->setEmail('cathyjulien14@orange.fr')
             ->setYearCopyright(new \DateTime('now'));
         $manager->persist($foot);
 
