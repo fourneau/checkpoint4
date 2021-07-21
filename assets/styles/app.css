@@ -88,7 +88,7 @@ hr {
 
 .nav-link1 {
     font-size: 24px;
-    color: #4886af;
+    color: white;
     border-radius: 10px;
     display: flex;
     text-align: center;
@@ -400,7 +400,7 @@ ul {
 footer {
     justify-content: space-between;
     padding: 1rem;
-    background: linear-gradient(to right, rgba(27, 7, 73, 0.705), black);
+    background: linear-gradient(to left, rgba(27, 7, 73, 0.705), black);
     color: white;
     text-align: center;
 }

@@ -33,7 +33,7 @@ class ContactType extends AbstractType
         ('placeholder' => 'Message:', 'style' => 'height: 20rem;
         background-color:#ebebeb; border-radius:1rem')))
         ->add('checkbox', CheckboxType::class, [
-        'label' => 'En cochant cette case, j\'accepte de recevoir une Puncline de Julien',
+        'label' => 'En cochant cette case, j\'accepte de recevoir une Punchline de Julien',
         'required' => true,
         ])
         ;
