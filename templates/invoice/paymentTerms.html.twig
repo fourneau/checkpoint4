@@ -1,0 +1,11 @@
+<div class="paymentTerms">
+    <h2 class="paymentTermsTitle">MODALITES DE PAIEMENT</h2>
+    {% for paymentterm in paymentterms %}
+    <p>{{paymentterm.modalites}}</p>
+    <p>RIB : {{paymentterm.ribNumber}}</p>
+    <p>IBAN : {{paymentterm.IBAN}} – BIC : {{paymentterm.BIC}}</p>
+    <p>Domiciliation : {{paymentterm.domiciliation}}</p>
+    <p>{{paymentterm.lawrecall}}
+    </p>
+    {% endfor %}
+</div>

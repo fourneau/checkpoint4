@@ -1,0 +1,54 @@
+{% block footer %}
+
+<div class="row">
+    <!--Grid column-->
+    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5">
+        <ul>
+            <li>
+                <a href="/" class="text-white">À propos</a>
+            </li>
+            <li>
+                <a href="#compétences" class="text-white">Compétences</a>
+            </li>
+            <li>
+                <a href="#actualités" class="text-white">Actualités</a>
+            </li>
+            <li>
+                <a href="#contact" class="text-white">Contact</a>
+            </li>
+            <li>
+                <a href="#mentionslegales" class="text-white">Mentions légales</a>
+            </li>
+            <li>
+                <a href="#protection_donnees" class="text-white">Politique de protection des données</a>
+            </li>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-2 col-sm-2">
+        <a href="/"><i class="far fa-arrow-alt-circle-up col-2 text-white" style="font-size: 30px; color: white text-center"></i></a>
+        <p>RETOUR EN HAUT</p>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5">
+        <ul>
+            {% for footer in footers %}
+            <li>
+                <a>Thibaud Béjat</a>
+            </li>
+            <li>
+                <a>{{ footer.city }}</a>
+            </li>
+            <li>
+                <a>{{ footer.email }}</a>
+            </li>
+            <li>
+                <a>Tél: {{ footer.phone }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% for footer in footers %}
+    <div class "text-center p-3 text-white">
+        © Thibaud Béjat Avocat - {{ footer.yearcopyright|date(" Y ") }} - Tous droits réservés
+    </div>
+    {% endfor %}
+
+</div>{% endblock %}

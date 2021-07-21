@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}{% block body %}
+
+<div class="mb-5" id="actualités"></div>
+</div>
+
+<hr class="separateur">
+
+<h1 class="titre mt-5 mb-5">ACTUALITÉS</h1>
+
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-2">
+            <a class="nav-link1" aria-current="page" href="../">Les plus récentes</a>
+        </div>
+        <div class="col-2">
+            <a class="nav-link1" aria-current="page" href="/journal">Journal Officiel</a>
+        </div>
+        <div class="col-4">
+            <a class="nav-link1" aria-current="page" href="/importante">Les Décisions importantes des derniers mois</a>
+        </div>
+        <div class="col-3">
+            <a class="nav-link1" aria-current="page" href="../actualites">Toutes les actualités</a>
+        </div>
+    </div>
+    <div class="article row g-5">
+        {% for new in news %} {% if new.getNewsCategory == "Journal Officiel" %}
+        <div class="news col-sm-6">
+            <div class="card_5">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="m-4"> {{new.title}} </h5>
+                    </div>
+                    <div class="col-4">
+                    </div>
+                    <div class="col-2">
+                        <div class="logo mt-4">
+                            <img class="img-news" src={{new.newscategory.logo}}>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="m-4"> {{new.newscategory.name}} </h6>
+                <div class="new_description ">
+                    <p class=" p-2 m-4 ">{{new.description}}</p>
+                </div>
+                <div class="p-1 text-center ">
+                    <a href="#myModal{{ loop.index }}" data-bs-target="#myModal{{ loop.index }}" data-bs-toggle="modal" class=" btn bg-white rounded align-center"> En savoir plus </a>
+                    <div class="modal fade" id="myModal{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class=" modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">{{new.title}}</h5>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid ">
+                                        <div class="row ">
+                                            <div class="col-sm-12">
+                                                <h6>{{new.newscategory.name}}</h6>
+                                                <div class="row">
+                                                    <div class="col-10 m-5">
+                                                        {{new.subtitle}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 ml-auto">{{new.description}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="card-date m-3"> {{new.date|date("d-m-Y")}} </p>
+                </div>
+            </div>
+        </div>
+        {% else %} {% endif %} {% endfor %}
+    </div>
+</div>{% endblock %}

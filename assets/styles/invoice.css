@@ -1,0 +1,124 @@
+/* navbar invoice*/
+
+.navbar-invoice {
+    background-color: #4886af;
+    font-size: 24px;
+}
+
+.logoNav {
+    width: 3%;
+    height: 3%;
+}
+
+.nav-link {
+    color: white;
+    font-size: 22px;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.nav-link:hover {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+    color: #4886af;
+    font-size: 24px;
+}
+
+
+/* facturation */
+
+.logoInvoice {
+    width: 10%;
+}
+
+h3 {
+    margin: 0.5em;
+}
+
+.headerInvoice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.subHeaderInvoice {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.subHeaderInvoice td {
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.subHeaderInvoice .t1 {
+    padding-right: 400px;
+}
+
+.invoiceId {
+    margin-bottom: 5%;
+}
+
+.invoiceId td {
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.invoiceId .t1 {
+    padding-left: 500px;
+    padding-right: 500px;
+}
+
+.total {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    width: 60%;
+}
+
+.invoiceBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invoiceSeparator {
+    width: 90%;
+    border: 3px solid black;
+}
+
+.paymentTerms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    width: 60%;
+    margin-bottom: 5%;
+    padding: 1%;
+}
+
+.payment {
+    display: flex;
+    justify-content: center;
+}
+
+.paymentTermsTitle {
+    margin-bottom: 2%;
+}
+
+li .footerInvoice {
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+}
+
+.footerInvoice {
+    display: flex;
+    justify-content: center;
+}

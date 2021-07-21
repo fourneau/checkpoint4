@@ -1,0 +1,21 @@
+<div class="headerInvoice">
+    <img class="logoInvoice" src="{{ asset('build/logothibaut.png') }}" /> {% for owner in owners %}
+    <h3>{{owner.firstname}} {{owner.lastname}}</h3>
+    <h4>Avocat</h4>
+
+</div>
+
+<table class="subHeaderInvoice">
+    <tr class="coordonneesInvoice">
+        <td class="t1">
+            <p>{{owner.adress}}</p>
+            <p>Toque: {{owner.toquenumber}}</p>
+        </td>
+        <td class="t2">
+            <p>Téléphone: {{owner.phone}}</p>
+            <p> Télécopie : {{owner.fax}}</p>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>

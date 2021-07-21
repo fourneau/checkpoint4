@@ -1,0 +1,30 @@
+{% block header %}
+
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+        <img class="logoNav rounded-circle" src="{{ asset( 'build/logo1.png') }}" alt=" ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="me-auto mb-2 mb-lg-0 mx-auto d-flex justify-content-between flex-wrap">
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Accueil</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/#compétences">Compétences</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/#actualités">Actualités</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+
+{% endblock %}
