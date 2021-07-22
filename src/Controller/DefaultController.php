@@ -87,11 +87,13 @@ class DefaultController extends AbstractController
      * @Route("/journal", name="journal")
      */
     public function journal(
+        UploadBackgroundRepository $uploadBackgroundRepository,
         NewsRepository $newsRepository,
         AboutRepository $aboutRepository,
         NewsCategoryRepository $newsCategoryRepository
     ): Response {
         return $this->render('default/journal.html.twig', [
+        'background' => $uploadBackgroundRepository->findAll([], ['id' => 'DESC'], 1),    
         'abouts' => $aboutRepository->findAll(),
         'news' => $newsRepository->findAll(),
         'newscategory' => $newsCategoryRepository->findAll(),

@@ -1,4 +1,6 @@
-{% extends 'base.html.twig' %}{% block body %}
+{% extends 'base.html.twig' %}{% block body %} {% for imageback in background %}
+<div class="d-block w-100" style="background-image:url('{{ vich_uploader_asset(imageback, 'imageUpload') }}')" border="0" alt="... ">
+    {% endfor %}
 
 <div class="mb-5" id="actualités"></div>
 </div>
@@ -10,16 +12,16 @@
 <div class="container">
     <div class="row mb-5">
         <div class="col-2">
-            <a class="nav-link1" aria-current="page" href="../">Les plus récentes</a>
+            <a class="nav-link1" aria-current="page" href="../">Infos du Matin</a>
         </div>
         <div class="col-2">
-            <a class="nav-link1" aria-current="page" href="/journal">Journal Officiel</a>
+            <a class="nav-link1" aria-current="page" href="/journal">En préparation</a>
         </div>
         <div class="col-4">
-            <a class="nav-link1" aria-current="page" href="/importante">Les Décisions importantes des derniers mois</a>
+            <a class="nav-link1" aria-current="page" href="/importante">L'Avenir pour bientôt ou pas?</a>
         </div>
         <div class="col-3">
-            <a class="nav-link1" aria-current="page" href="../actualites">Toutes les actualités</a>
+            <a class="nav-link1" aria-current="page" href="../actualites">+ de 18ans</a>
         </div>
     </div>
     <div class="article row g-5">
@@ -79,6 +81,8 @@
                 </div>
             </div>
         </div>
+        </div>
         {% else %} {% endif %} {% endfor %}
     </div>
+    
 </div>{% endblock %}
