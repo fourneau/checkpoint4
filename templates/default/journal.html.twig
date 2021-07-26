@@ -1,9 +1,8 @@
 {% extends 'base.html.twig' %}{% block body %} {% for imageback in background %}
 <div class="d-block w-100" style="background-image:url('{{ vich_uploader_asset(imageback, 'imageUpload') }}')" border="0" alt="... ">
-    {% endfor %}
-
+    
 <div class="mb-5" id="actualités"></div>
-</div>
+
 
 <hr class="separateur">
 
@@ -83,6 +82,9 @@
         </div>
         </div>
         {% else %} {% endif %} {% endfor %}
+
     </div>
     
-</div>{% endblock %}
+</div>
+{% endfor %}
+{% endblock %}

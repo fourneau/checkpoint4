@@ -105,10 +105,12 @@ class DefaultController extends AbstractController
     public function importante(
         NewsRepository $newsRepository,
         AboutRepository $aboutRepository,
+        UploadBackgroundRepository $uploadBackgroundRepository,
         NewsCategoryRepository $newsCategoryRepository
     ): Response {
         return $this->render('default/importante.html.twig', [
         'abouts' => $aboutRepository->findAll(),
+        'background' => $uploadBackgroundRepository->findAll([], ['id' => 'DESC'], 1),
         'news' => $newsRepository->findAll(),
         'newscategory' => $newsCategoryRepository->findAll(),
         ]);
@@ -119,10 +121,12 @@ class DefaultController extends AbstractController
     public function actualites(
         NewsRepository $newsRepository,
         AboutRepository $aboutRepository,
+        UploadBackgroundRepository $uploadBackgroundRepository,
         NewsCategoryRepository $newsCategoryRepository
     ): Response {
         return $this->render('default/actualites.html.twig', [
         'abouts' => $aboutRepository->findAll(),
+        'background' => $uploadBackgroundRepository->findAll([], ['id' => 'DESC'], 1),
         'news' => $newsRepository->findAll(),
         'newscategory' => $newsCategoryRepository->findAll(),
         ]);
